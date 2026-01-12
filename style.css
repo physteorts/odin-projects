@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --base: #191724;
+  --text: #e0def4;
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --gold: #f6c177;
+  --foam: #9ccfd8;
+  --pine: #31748f;
+  --iris: #c4a7e7;
+  --love: #eb6f92;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  padding: 4rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.header h1::before {
+  content: "";
+  width: 6px;
+  height: auto;
+  align-self: stretch;
+  background-color: var(--gold);
+  border-radius: 6px;
+}
+
+.header h1 .colored-text {
+  color: var(--pine);
+}
+
+.header p {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin: 1rem auto;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--foam);
+  border-bottom: 2px dotted var(--foam);
+  font-weight: 500;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.main .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface);
+  border: 2px solid var(--overlay);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: 0.3s ease;
+}
+
+.main .card:hover {
+  background-color: var(--overlay);
+}
+
+.main .card h2 {
+  color: var(--iris);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.main .card h2::before {
+  content: "";
+  width: 6px;
+  height: auto;
+  align-self: stretch;
+  background-color: var(--gold);
+  border-radius: 6px;
+}
+
+.main .card a {
+  color: var(--foam);
+  text-transform: uppercase;
+}
+
+.main .card a:first-of-type {
+  margin-bottom: 1rem;
+}
