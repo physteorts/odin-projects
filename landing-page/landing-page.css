@@ -1,7 +1,26 @@
-body {
+:root {
+  --base: #191724;
+  --text: #e0def4;
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --gold: #f6c177;
+  --foam: #9ccfd8;
+  --pine: #31748f;
+  --iris: #c4a7e7;
+  --love: #eb6f92;
+  --highlight: #21202e;
+}
+
+* {
   padding: 0;
   margin: 0;
-  background-color: #faf4ed;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--text);
   font-family: Roboto, Geneva, sans-serif;
 }
 
@@ -9,79 +28,102 @@ img {
   border-radius: 12px;
 }
 
-.hero {
-  background-color: #191724;
-}
-
 .header {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
+  padding-top: 1rem;
 }
 
 .header ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 1.5rem;
   list-style: none;
 }
 
 .header a {
-  color: #faf4ed;
+  color: var(--text);
   text-decoration: none;
 }
 
 .main {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
-  padding-bottom: 50px;
+  gap: 3rem;
+  margin: 3rem auto;
 }
 
 .main .left {
-  max-width: 390px;
-  color: #faf4ed;
+  max-width: 400px;
+  color: var(--text);
 }
 
 .main h1 {
-  font-size: 48px;
+  font-size: 3.5rem;
   margin: 0;
+  line-height: 3rem;
+  color: var(--gold);
+  display: flex;
+  gap: 1rem;
+}
+
+.main h1::before {
+  content: "";
+  width: 0.8rem;
+  height: auto;
+  align-self: stretch;
+  background-color: var(--gold);
+  border-radius: 6px;
 }
 
 .main p {
-  margin: 0;
+  margin: 1rem auto;
   font-weight: 300;
+  font-size: 1.1rem;
 }
 
 .main button {
-  background-color: #9ccfd8;
-  color: #191724;
+  background-color: var(--foam);
+  color: var(--base);
   border: none;
   border-radius: 6px;
-  padding: 8px 20px;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.information {
-  color: #191724;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
 }
 
 .information h2 {
+  font-size: 2rem;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: var(--iris);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.information h2::before {
+  content: "";
+  width: 6px;
+  height: auto;
+  align-self: stretch;
+  background-color: var(--iris);
+  border-radius: 6px;
 }
 
 .information .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .information .item {
-  max-width: 170px;
+  max-width: 200px;
   text-align: center;
 }
 
@@ -90,10 +132,9 @@ img {
 }
 
 .testimonial {
-  background-color: #191724;
-  color: #faf4ed;
-  padding: 40px;
-  margin-top: 50px;
+  background-color: var(--surface);
+  padding: 2rem;
+  margin: 4rem auto;
 }
 
 .testimonial div {
@@ -102,23 +143,23 @@ img {
 }
 
 .testimonial .quote {
-  font-size: 36px;
+  font-size: 2.5rem;
   margin: 0;
   font-weight: 300;
 }
 
 .testimonial .author {
   text-align: right;
-  font-size: 26px;
+  font-size: 2rem;
   margin: 0;
+  color: var(--pine);
 }
 
 .newsletter {
   max-width: 900px;
-  margin: 50px auto;
-  padding: 30px 0;
-  background-color: #191724;
-  color: #faf4ed;
+  margin: 3rem auto;
+  padding: 2.5rem 0;
+  background-color: var(--surface);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -131,20 +172,20 @@ img {
 }
 
 .newsletter button {
-  background-color: #191724;
-  color: var(--accent);
-  border: 2px solid #9ccfd8;
+  background-color: var(--surface);
+  color: var(--foam);
+  border: 2px solid var(--foam);
   border-radius: 12px;
-  padding: 10px 26px;
-  font-size: 16px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
 }
 
 .footer {
-  background-color: #191724;
+  background-color: var(--surface);
+  color: var(--love);
   text-align: center;
-  padding: 16px;
-  color: #faf4ed;
-  font-size: 18px;
+  padding: 1rem;
+  font-size: 1.1rem;
 }
 
 .italic {
@@ -153,4 +194,10 @@ img {
 
 .bold {
   font-weight: bold;
+  color: var(--iris);
+  font-size: 1.1rem;
+}
+
+button {
+  cursor: pointer;
 }
