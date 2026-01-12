@@ -1,0 +1,51 @@
+body {
+  background-color: #191724;
+  color: #faf4ed;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sketch {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #9ccfd8;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.box {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 1;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #9ccfd8;
+  color: #191724;
+  padding: 10px 32px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+}
