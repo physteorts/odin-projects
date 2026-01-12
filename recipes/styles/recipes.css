@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 :root {
   --base: #191724;
   --text: #e0def4;
@@ -13,38 +11,21 @@
   --highlight: #21202e;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-color: var(--base);
   color: var(--text);
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  padding: 4rem 1rem;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.header h1 {
+h1 {
   font-size: 3.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-weight: 800;
-  letter-spacing: -2px;
   color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
-.header h1::before {
+h1::before {
   content: "";
   width: 6px;
   height: auto;
@@ -53,31 +34,15 @@ body {
   border-radius: 6px;
 }
 
-.header h1 .colored-text {
-  color: var(--pine);
-}
-
-.header p {
-  color: var(--muted);
-  font-weight: 300;
-  font-size: 1.1rem;
-  margin: 1rem auto;
-}
-
-.header a {
-  text-decoration: none;
-  color: var(--foam);
-  border-bottom: 2px dotted var(--foam);
-  font-weight: 500;
-}
-
-.main {
+.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
   gap: 1.5rem;
+  margin: 2rem;
 }
 
-.main .card {
+.container .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,20 +55,18 @@ body {
   transition: 0.3s ease;
 }
 
-.main .card:hover {
+.container .card:hover {
   background-color: var(--overlay);
 }
 
-.main .card h2 {
-  color: var(--iris);
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+.container .card h2 {
+  font-size: 1.8rem;
   display: flex;
-  align-items: center;
   gap: 12px;
+  color: var(--iris);
 }
 
-.main .card h2::before {
+.container .card h2::before {
   content: "";
   width: 6px;
   height: auto;
@@ -112,11 +75,8 @@ body {
   border-radius: 6px;
 }
 
-.main .card a {
-  color: var(--foam);
+.container .card a {
+  font-size: 1.1rem;
   text-transform: uppercase;
-}
-
-.main .card a:first-of-type {
-  margin-bottom: 1rem;
+  color: var(--foam);
 }
