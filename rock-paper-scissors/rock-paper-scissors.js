@@ -64,9 +64,9 @@ function resetGame() {
   gameOver = false;
   computerScore = 0;
   computerScoreEl.textContent = computerScore;
-  computerChoiceEl.textContent = "";
+  computerChoiceEl.textContent = "-";
   playerScore = 0;
   playerScoreEl.textContent = playerScore;
-  playerChoiceEl.textContent = "";
-  resultEl.textContent = "First one to reach the 5 score points wins the game!";
+  playerChoiceEl.textContent = "-";
+  resultEl.textContent = "Choose your move to begin!";
 }

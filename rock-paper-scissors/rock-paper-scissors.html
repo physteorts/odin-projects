@@ -7,23 +7,32 @@
     <link rel="stylesheet" href="rock-paper-scissors.css" />
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
+    <div class="header">
+      <h1>Rock Paper Scissors</h1>
+      <p>First to 5 points takes the crown!</p>
+    </div>
     <div class="container">
+      <div class="scoreboard">
+        <div class="stat-card">
+          <p class="label">Player</p>
+          <p class="player-score score-val">0</p>
+          <p class="player-choice choice-val">-</p>
+        </div>
+        <div class="stat-card">
+          <p class="label">Computer</p>
+          <p class="computer-score score-val">0</p>
+          <p class="computer-choice choice-val">-</p>
+        </div>
+      </div>
+      <p class="result">Choose your move to begin!</p>
+
       <div class="btns">
         <button class="choice">Rock</button>
         <button class="choice">Paper</button>
         <button class="choice">Scissors</button>
-        <button class="reset">Reset</button>
       </div>
-      <div class="scores">
-        <p>Player score: <span class="player-score">0</span></p>
-        <p>Computer score: <span class="computer-score">0</span></p>
-      </div>
-      <div class="choices">
-        <p>Player choice: <span class="player-choice"></span></p>
-        <p>Computer choice: <span class="computer-choice"></span></p>
-      </div>
-      <p class="result">First one to reach the 5 score points wins the game!</p>
+
+      <button class="reset">Reset Game</button>
     </div>
     <script src="rock-paper-scissors.js"></script>
   </body>
