@@ -1,10 +1,13 @@
 const playerChoices = document.querySelectorAll(".choice");
-const resetBtn = document.querySelector(".reset");
 const resultEl = document.querySelector(".result");
 const playerChoiceEl = document.querySelector(".player-choice");
 const computerChoiceEl = document.querySelector(".computer-choice");
 const playerScoreEl = document.querySelector(".player-score");
 const computerScoreEl = document.querySelector(".computer-score");
+const modal = document.querySelector(".modal");
+const modalTitle = document.querySelector(".title");
+const modalMessage = document.querySelector(".message");
+const playAgainBtn = document.querySelector(".play-again");
 let playerScore = 0;
 let computerScore = 0;
 let gameOver = false;
@@ -15,7 +18,10 @@ playerChoices.forEach((choice) => {
   });
 });
 
-resetBtn.addEventListener("click", resetGame);
+playAgainBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  resetGame();
+});
 
 function getComputerChoice() {
   const choices = ["Rock", "Paper", "Scissors"];
@@ -44,10 +50,10 @@ function playRound(playerChoice) {
   }
 
   if (playerScore === 5) {
-    resultEl.textContent = "You won the game!";
+    showModal("Victory!", "You dominated the computer and took the crown.");
     gameOver = true;
   } else if (computerScore === 5) {
-    resultEl.textContent = "You lost the game!";
+    showModal("Defeat", "The computer outsmarted you this time.");
     gameOver = true;
   }
 }
@@ -58,6 +64,12 @@ function playGame(playerChoice) {
   } else {
     playRound(playerChoice);
   }
+}
+
+function showModal(title, message) {
+  modalTitle.textContent = title;
+  modalMessage.textContent = message;
+  modal.style.display = "flex";
 }
 
 function resetGame() {

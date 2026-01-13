@@ -99,25 +99,11 @@ body {
   font-weight: 600;
   color: var(--iris);
   margin: 3rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.result::before {
-  content: "";
-  width: 6px;
-  height: auto;
-  align-self: stretch;
-  background-color: var(--iris);
-  border-radius: 6px;
 }
 
 .btns {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .choice {
@@ -134,17 +120,68 @@ body {
   color: var(--foam);
 }
 
-.reset {
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: var(--love);
-  color: var(--base);
-  font-size: 1rem;
-  padding: 0.8rem;
-  border: none;
+  height: 100%;
+  background: rgba(25, 23, 36, 0.85);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.reset:hover {
-  opacity: 0.8;
+.content {
+  background: var(--surface);
+  padding: 40px;
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  color: var(--iris);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.content h2::before {
+  content: "";
+  width: 6px;
+  height: auto;
+  align-self: stretch;
+  background-color: var(--iris);
+  border-radius: 6px;
+}
+
+.content p {
+  color: var(--muted);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.play-again {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--overlay);
+  color: var(--text);
+  font-size: 1.1rem;
+  border: 1px solid var(--overlay);
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.play-again:hover {
+  border: 1px solid var(--foam);
+  color: var(--foam);
 }
 
 button {
