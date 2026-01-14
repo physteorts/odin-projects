@@ -137,8 +137,9 @@ body {
 .content {
   background: var(--surface);
   padding: 40px;
-  border: 1px solid var(--muted);
+  border: 1px solid var(--overlay);
   border-radius: 12px;
+  box-shadow: 3px 3px 5px var(--highlight);
   text-align: center;
   max-width: 400px;
   width: 90%;

@@ -24,7 +24,8 @@ body {
   font-family: Roboto, Geneva, sans-serif;
 }
 
-img {
+img,
+button {
   border-radius: 12px;
 }
 
@@ -183,8 +184,7 @@ button {
   background-color: var(--overlay);
   color: var(--text);
   border: 1px solid var(--overlay);
-  border-radius: 6px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 2rem;
   font-size: 1rem;
   transition: 0.3s ease;
 }

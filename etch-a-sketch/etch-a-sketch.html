@@ -10,13 +10,30 @@
     <h1>Etch A Sketch</h1>
     <div class="container">
       <div class="options">
-        <button class="color">Color</button>
-        <button class="random">Random</button>
-        <button class="eraser">Eraser</button>
-        <button class="reset">Reset</button>
-        <button class="size">Size</button>
+        <div class="controls">
+          <h2>tools</h2>
+          <button class="color">Solid Color</button>
+          <button class="random">Random</button>
+          <button class="eraser">Eraser</button>
+        </div>
+        <div class="controls">
+          <h2>actions</h2>
+          <button class="size">Change Size</button>
+          <button class="reset">Reset Sketch</button>
+        </div>
       </div>
       <div class="sketch"></div>
+    </div>
+    <div class="modal">
+      <div class="content">
+        <h2>Sketch Size</h2>
+        <p>Select a size (1 - 100)</p>
+        <input type="text" class="size-input" />
+        <div class="modal-actions">
+          <button class="cancel-size" id="cancel">Cancel</button>
+          <button class="confirm-size" id="confirm">Apply</button>
+        </div>
+      </div>
     </div>
     <script src="etch-a-sketch.js"></script>
   </body>
