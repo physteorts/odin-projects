@@ -32,7 +32,7 @@ equalBtn.addEventListener("click", calculate);
 
 function handleNumber(num) {
   if (currentValue === "0" && num === "0") return;
-  if (currentValue.length <= 15) {
+  if (currentValue.length <= 12) {
     currentValue += num;
     currentScreen.textContent = currentValue;
   }
@@ -70,7 +70,7 @@ function deleteNumber() {
 
 function clearCalculator() {
   currentValue = "";
-  currentScreen.textContent = currentValue;
+  currentScreen.textContent = "0";
   previousValue = "";
   previousScreen.textContent = previousValue;
   operator = "";
