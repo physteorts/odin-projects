@@ -51,7 +51,7 @@ h1::before {
   border: 2px solid var(--overlay);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 3px 3px 5px var(--highlight);
+  box-shadow: 0px 20px 40px var(--highlight);
   transition: 0.3s ease;
 }
 

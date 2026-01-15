@@ -156,7 +156,9 @@ button {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  border: 1px solid var(--overlay);
   border-radius: 12px;
+  box-shadow: 0px 20px 40px var(--highlight);
 }
 
 .newsletter p {

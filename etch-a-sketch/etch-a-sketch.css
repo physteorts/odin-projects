@@ -55,7 +55,7 @@ h1::before {
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid var(--overlay);
-  box-shadow: 3px 3px 5px var(--highlight);
+  box-shadow: 0px 20px 40px var(--highlight);
 }
 
 .controls {
@@ -93,7 +93,7 @@ h1::before {
   border-radius: 12px;
   padding: 1rem;
   background-color: var(--surface);
-  box-shadow: 3px 3px 5px var(--highlight);
+  box-shadow: 0px 20px 40px var(--highlight);
 }
 
 .row {
@@ -152,9 +152,9 @@ button.active {
   padding: 2rem;
   border: 1px solid var(--overlay);
   border-radius: 12px;
-  box-shadow: 3px 3px 5px var(--highlight);
+  box-shadow: 0px 20px 40px var(--highlight);
   text-align: center;
-  max-width: 300px;
+  max-width: 400px;
   width: 90%;
 }
 
@@ -179,28 +179,27 @@ button.active {
 
 .content p {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .content input {
-  width: 70%;
-  background-color: var(--overlay);
+  width: 50%;
+  background-color: var(--surface);
   color: var(--text);
-  border: 1px solid var(--overlay);
-  border-radius: 12px;
+  border: none;
+  border-bottom: 2px solid var(--foam);
   margin-bottom: 1.5rem;
   height: 2rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .content .size-input:focus {
   outline: none;
-  border: 1px solid var(--foam);
 }
 
 .content input.error {
-  border: 1px solid var(--love);
+  border-bottom: 2px solid var(--love);
 }
 
 .modal-actions {
