@@ -166,11 +166,6 @@ input:focus {
   transition: 0.3s ease;
 }
 
-.social img {
-  width: 18px;
-  height: 18px;
-}
-
 .social:hover {
   color: var(--foam);
   border-color: var(--foam);
