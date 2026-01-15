@@ -4,64 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="sign-up-form.css" />
+    <link rel="stylesheet" href="./sign-up-form.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="left">
-      <div class="background">
-        <img src="odin-lined.png" alt="Odin Logo" />
-        <h1>ODIN</h1>
+    <div class="container">
+      <div class="header">
+        <h1>Sign-up Form</h1>
+        <p>Join the community today.</p>
       </div>
-      <p>Made by Anonymous</p>
-    </div>
-    <div class="right">
-      <div class="top">
-        <p>
-          This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams. Sign up now
-          to get started.
-        </p>
-        <p>You know you want to.</p>
+
+      <form class="signup-form">
+        <div class="group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Jane Doe" required />
+        </div>
+
+        <div class="group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="jane@example.com"
+            required
+          />
+        </div>
+
+        <div class="group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required />
+        </div>
+
+        <button type="submit" class="btn">Create Account</button>
+      </form>
+
+      <div class="divider">
+        <span>or continue with</span>
       </div>
-      <div class="mid">
-        <p>Let's do this!</p>
-        <form action="">
-          <div class="row">
-            <label for="first-name"
-              >FIRST NAME
-              <input type="text" id="first-name" />
-            </label>
-            <label for="last-name"
-              >LAST NAME
-              <input type="text" id="last-name" />
-            </label>
-          </div>
-          <div class="row">
-            <label for="email"
-              >EMAIL
-              <input type="email" id="email" />
-            </label>
-            <label for="phone-number"
-              >PHONE NUMBER
-              <input type="tel" id="phone-number" />
-            </label>
-          </div>
-          <div class="row">
-            <label for="password"
-              >PASSWORD
-              <input type="password" id="password" required />
-            </label>
-            <label for="confirm-password"
-              >CONFIRM PASSWORD
-              <input type="password" id="confirm-password" required />
-            </label>
-          </div>
-        </form>
+
+      <div class="logins">
+        <button class="social">
+          <img
+            src="https://www.svgrepo.com/show/355037/google.svg"
+            alt="Google"
+          />
+          Google
+        </button>
+        <button class="social">
+          <img
+            src="https://www.svgrepo.com/show/512317/github-142.svg"
+            alt="GitHub"
+          />
+          GitHub
+        </button>
       </div>
-      <div class="bottom">
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a href="">Log in</a></p>
-      </div>
+
+      <footer class="footer">
+        <p>Already have an account? <a href="#">Sign in</a></p>
+      </footer>
     </div>
   </body>
 </html>
