@@ -24,7 +24,7 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  padding: 4rem 1rem;
+  padding: 2rem;
 }
 
 .header {
@@ -37,9 +37,10 @@ body {
   line-height: 3.5rem;
   margin-bottom: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 12px;
   font-weight: 800;
   letter-spacing: -2px;
   color: var(--gold);
@@ -52,6 +53,10 @@ body {
   align-self: stretch;
   background-color: var(--gold);
   border-radius: 6px;
+}
+
+.header .colored-text {
+  color: var(--pine);
 }
 
 .header p {
@@ -84,17 +89,12 @@ body {
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0px 20px 40px var(--highlight);
-  transition: 0.3s ease;
-}
-
-.main .card:hover {
-  background-color: var(--overlay);
 }
 
 .main .card h2 {
   color: var(--iris);
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -112,8 +112,4 @@ body {
 .main .card a {
   color: var(--foam);
   text-transform: uppercase;
-}
-
-.main .card a:first-of-type {
-  margin-bottom: 1rem;
 }

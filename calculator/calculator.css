@@ -46,7 +46,7 @@ h1::before {
 
 .calculator {
   background-color: var(--surface);
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   border-radius: 30px;
   padding: 2rem;
   width: 100%;

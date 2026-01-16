@@ -54,7 +54,7 @@ h1::before {
   background: var(--surface);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   box-shadow: 0px 20px 40px var(--highlight);
 }
 
@@ -114,13 +114,9 @@ button {
   font-size: 1rem;
   background-color: var(--overlay);
   color: var(--text);
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   border-radius: 12px;
   transition: 0.3s ease;
-}
-
-button:hover {
-  opacity: 0.7;
 }
 
 button.active {
@@ -131,6 +127,11 @@ button.active {
 .reset {
   background-color: var(--love);
   color: var(--base);
+}
+
+.size:hover {
+  border-color: var(--foam);
+  color: var(--foam);
 }
 
 .modal {
@@ -150,7 +151,7 @@ button.active {
 .content {
   background: var(--surface);
   padding: 2rem;
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   border-radius: 12px;
   box-shadow: 0px 20px 40px var(--highlight);
   text-align: center;
@@ -213,11 +214,11 @@ button.active {
 }
 
 #cancel:hover {
-  border: 1px solid var(--love);
+  border: 2px solid var(--love);
   color: var(--love);
 }
 
 #confirm:hover {
-  border: 1px solid var(--foam);
+  border: 2px solid var(--foam);
   color: var(--foam);
 }

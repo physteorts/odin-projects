@@ -1,6 +1,6 @@
 :root {
   --base: #191724;
-  --text: #faf4ed;
+  --text: #e0def4;
   --surface: #1f1d2e;
   --overlay: #26233a;
   --muted: #6e6a86;
@@ -29,7 +29,6 @@ body {
 
 .sidebar {
   grid-row: 1 / 3;
-  background-color: var(--surface);
 }
 
 .sidebar .nav a {
@@ -92,15 +91,19 @@ body {
 .header .search input {
   width: 500px;
   height: 35px;
-  background-color: var(--overlay);
-  border: 1px solid var(--overlay);
+  background-color: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--overlay);
   border-radius: 12px;
+  padding: 6px;
+  font-size: 1.1rem;
   transition: 0.3s ease;
 }
 
 .header .search input:focus {
   outline: none;
   border-color: var(--foam);
+  background-color: var(--overlay);
 }
 
 .header .account {
@@ -161,7 +164,7 @@ body {
   background-color: var(--surface);
   color: var(--text);
   padding: 10px 30px;
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   border-radius: 12px;
   font-size: 1rem;
   transition: 0.3s ease;
@@ -170,6 +173,7 @@ body {
 .header .options button:hover {
   border-color: var(--foam);
   color: var(--foam);
+  background-color: var(--overlay);
 }
 
 .main {
@@ -215,7 +219,7 @@ body {
 
 .main .project .container .card {
   background-color: var(--surface);
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0px 20px 40px var(--highlight);
@@ -230,6 +234,7 @@ body {
 
 .main .project .container .card .images img {
   width: 30px;
+  cursor: pointer;
 }
 
 .main .announcement {
@@ -240,14 +245,14 @@ body {
   background-color: var(--surface);
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   box-shadow: 0px 20px 40px var(--highlight);
 }
 
 .main .announcement .container hr {
   border: none;
   height: 2px;
-  background-color: var(--muted); /* Subtle dark line */
+  background-color: var(--muted);
   width: 100%;
   margin: 1rem 0;
 }
@@ -264,7 +269,7 @@ body {
   background-color: var(--surface);
   box-shadow: 0px 20px 40px var(--highlight);
   padding: 20px;
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   border-radius: 12px;
   display: flex;
   flex-direction: column;

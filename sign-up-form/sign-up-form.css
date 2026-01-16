@@ -34,7 +34,7 @@ body {
   background-color: var(--surface);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid var(--overlay);
+  border: 2px solid var(--overlay);
   width: 100%;
   max-width: 440px;
   box-shadow: 0 20px 40px var(--highlight);
@@ -84,15 +84,26 @@ body {
 label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--iris);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  display: flex;
+  gap: 6px;
+}
+
+label::before {
+  content: "";
+  width: 6px;
+  height: auto;
+  align-self: stretch;
+  background-color: var(--iris);
+  border-radius: 6px;
 }
 
 input {
   background-color: var(--overlay);
-  border: 1px solid transparent;
-  padding: 0.8rem 1rem;
+  border: 2px solid var(--overlay);
+  padding: 0.8rem;
   border-radius: 12px;
   color: var(--text);
   font-size: 1rem;
@@ -107,8 +118,8 @@ input:focus {
 .btn {
   background-color: var(--overlay);
   color: var(--text);
-  border: 1px solid transparent;
-  padding: 1rem;
+  border: 2px solid var(--overlay);
+  padding: 0.8rem;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 700;
@@ -118,7 +129,7 @@ input:focus {
 }
 
 .btn:hover {
-  border: 1px solid var(--foam);
+  border-color: var(--foam);
   color: var(--foam);
 }
 
@@ -157,7 +168,7 @@ input:focus {
   gap: 10px;
   background-color: var(--overlay);
   color: var(--text);
-  border: 1px solid transparent;
+  border: 2px solid var(--overlay);
   padding: 0.75rem;
   border-radius: 12px;
   font-size: 0.9rem;
