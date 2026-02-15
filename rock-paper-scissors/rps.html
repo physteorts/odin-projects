@@ -7,7 +7,31 @@
     <link rel="stylesheet" href="./rps.css" />
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <script src="./rps.js"></script>
+    <div class="container">
+      <div class="header">
+        <h1>Rock Paper Scissors</h1>
+        <p>First to 5 points wins the game</p>
+      </div>
+      <div class="stats">
+        <div class="board">
+          <p class="name">player</p>
+          <p class="player-score score-el">0</p>
+          <p class="player-choice choice-el">-</p>
+        </div>
+        <div class="board">
+          <p class="name">computer</p>
+          <p class="computer-score score-el">0</p>
+          <p class="computer-choice choice-el">-</p>
+        </div>
+      </div>
+      <p class="result">Click on choices to start playing</p>
+      <div class="choices">
+        <button class="choice">Rock</button>
+        <button class="choice">Paper</button>
+        <button class="choice">Scissors</button>
+      </div>
+      <button class="reset">Reset Game</button>
+    </div>
+    <script src="rps.js"></script>
   </body>
 </html>
