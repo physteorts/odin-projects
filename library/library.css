@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --base: #191724;
+  --lightBase: rgba(25, 23, 36, 0.1);
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --lightLove: rgba(235, 111, 146, 0.1);
+  --gold: #f6c177;
+  --pine: #31748f;
+  --lightPine: rgba(49, 116, 143, 0.1);
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+  --shadow: #21202e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: var(--base);
+  color: var(--text);
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: var(--subtle);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  justify-content: center;
+  gap: 2rem;
+}
+
+.add-book {
+  background-color: var(--base);
+  border: 2px dashed var(--subtle);
+  border-radius: 1rem;
+  padding: 2rem;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-book:hover {
+  background-color: var(--surface);
+}
+
+.add-book .add-icon {
+  width: 30%;
+  color: var(--foam);
+  opacity: 0.8;
+}
+
+.book-card {
+  background-color: var(--surface);
+  border: 1px solid var(--overlay);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+  box-shadow: 0px 20px 40px var(--shadow);
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.author {
+  font-size: 1.3rem;
+}
+
+.status {
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+}
+
+.completed {
+  background-color: var(--lightPine);
+  color: var(--pine);
+}
+
+.in-progress {
+  background-color: var(--lightLove);
+  color: var(--love);
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  flex: 1;
+  background-color: var(--overlay);
+  color: var(--text);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightBase);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.content {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  margin: auto 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--overlay);
+  border-radius: 1rem;
+  box-shadow: 0px 20px 40px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.text-input label {
+  color: var(--subtle);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.text-input input {
+  background-color: var(--overlay);
+  border: 1px solid transparent;
+  height: 35px;
+  border-radius: 0.5rem;
+  outline: none;
+  color: var(--text);
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.text-input input.error {
+  border-color: var(--love);
+}
+
+.text-input input:focus {
+  border-color: var(--foam);
+}
+
+.status-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-input input {
+  accent-color: var(--foam);
+  width: 25px;
+}
