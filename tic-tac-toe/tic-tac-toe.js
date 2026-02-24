@@ -34,6 +34,8 @@ const GameController = (() => {
 
   const getActivePlayer = () => activePlayer;
 
+  const getGameOver = () => gameOver;
+
   const checkWinner = () => {
     const board = Gameboard.getBoard();
     const winConditions = [
@@ -65,7 +67,7 @@ const GameController = (() => {
         return "tie";
       }
       switchPlayerTurn();
-      return "continue";
+      return;
     }
 
     return "invalid";
@@ -77,7 +79,7 @@ const GameController = (() => {
     gameOver = false;
   };
 
-  return { playRound, getActivePlayer, resetGame };
+  return { playRound, getActivePlayer, getGameOver, resetGame };
 })();
 
 const DisplayController = (() => {
@@ -97,16 +99,11 @@ const DisplayController = (() => {
 
   cells.forEach((cell, index) => {
     cell.addEventListener("click", () => {
-      if (
-        statusText.textContent.includes("Wins") ||
-        statusText.textContent.includes("Tie")
-      ) {
-        return;
-      }
+      if (GameController.getGameOver()) return;
 
       const result = GameController.playRound(index);
 
-      if (result === "over" || result === "invalid") return;
+      if (result === "invalid") return;
 
       updateScreen();
 
