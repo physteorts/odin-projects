@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --base: #191724;
+  --lightBase: rgba(25, 23, 36, 0.1);
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --lightLove: rgba(235, 111, 146, 0.1);
+  --gold: #f6c177;
+  --pine: #31748f;
+  --lightPine: rgba(49, 116, 143, 0.1);
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+  --shadow: #21202e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: var(--base);
+  color: var(--text);
+  padding: 2rem;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--surface);
+  border: 1px solid var(--overlay);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0px 20px 40px var(--shadow);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 200px));
+  gap: 1rem;
+}
+
+.cell {
+  background-color: var(--overlay);
+  border-radius: 1rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.cell.player1 {
+  color: var(--pine);
+}
+
+.cell.player2 {
+  color: var(--love);
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: var(--overlay);
+  color: var(--text);
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+}
